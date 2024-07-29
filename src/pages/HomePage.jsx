@@ -1,27 +1,27 @@
-import posts from "../posts.json";
+import postsData from "../posts.json";
 import Article from "../components/Article";
+import Search from "../components/Search";
 import { useState } from "react";
 
-let Homepage = () => {
-  const [search, setSearch] = useState("");
+function Homepage() {
+  const [posts, setPosts] = useState(postsData);
+  const [totalPosts, setTotalPosts] = useState(0);
 
-  const changeSearch = (event) => {
-    console.log(event.target.value);
-    setSearch(event.target.value);
+  const onSearchChange = (value) => {
+    const filteredPosts = postsData.filter((item) => item.title.toLowerCase().includes(value.toLowerCase()));
+    setPosts(filteredPosts);
+    setTotalPosts(filteredPosts.length);
   };
+
   return (
     <>
       <h1>Halaman Blog </h1>
-      <div>
-        cari artikel : <input onChange={changeSearch}></input>
-        {""}
-      </div>
-      <small>Di temukan 0 data dengan pencarian kata {search}</small>
-      {posts.map(({ title, tags, date }, index) => (
-        <Article {...{ title, tags, date }} key={index} />
+      <Search onSearchChange={onSearchChange} totalPosts={totalPosts} />
+      {posts.map((props, index) => (
+        <Article {...props} key={index} />
       ))}
     </>
   );
-};
+}
 
 export default Homepage;

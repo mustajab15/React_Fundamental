@@ -1,17 +1,20 @@
 [
-    {
-        "title": "Belajar React Js",
-        "tags": ["react", "Front End"],
-        "date":"2024-1-1"
-    },
-    {
-        "title": "Belajar Vue Js",
-        "tags": ["Vue Js", "Front End"],
-        "date":"2024-1-2"
-    },
-    {
-        "title": "Belajar Integrasi Daisy-Ui",
-        "tags": ["react,Vue", "Front End"],
-        "date":"2024-1-2"
-    }
+  {
+    "title": "Belajar React Js",
+    "tags": ["react", "Front End"],
+    "date": "2024-1-1",
+    "isNew": true
+  },
+  {
+    "title": "Belajar Vue Js",
+    "tags": ["Vue Js", "Front End"],
+    "date": "2024-1-2",
+    "isNew": false
+  },
+  {
+    "title": "Belajar Integrasi Daisy-Ui",
+    "tags": ["react,Vue", "Front End"],
+    "date": "2024-1-2",
+    "isNew": false
+  }
 ]
