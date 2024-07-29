@@ -1,12 +1,9 @@
 import "./App.css";
-import Article from "./components/Article";
-import Props from "./components/Props";
-
+import Homepage from "./pages/HomePage";
 function App() {
   return (
     <>
-      <Article />
-      <Props name="Kaka Jabs" titles={["Vue Js", "Nuxt Js"]} />
+      <Homepage />
     </>
   );
 }
