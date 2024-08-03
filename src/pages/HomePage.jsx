@@ -1,7 +1,7 @@
 import postsData from "../posts.json";
 import Article from "../components/Article";
 import Search from "../components/Search";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Homepage() {
   const [posts, setPosts] = useState(postsData);
@@ -15,11 +15,12 @@ function Homepage() {
 
   return (
     <>
-      <h1>Halaman Blog </h1>
+      <h1>Simple Blog </h1>
       <Search onSearchChange={onSearchChange} totalPosts={totalPosts} />
       {posts.map((props, index) => (
-        <Article {...props} key={index} />
+        <Article {...props} key={index} name={name} />
       ))}
+      <hr />
     </>
   );
 }

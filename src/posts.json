@@ -16,5 +16,23 @@
     "tags": ["react,Vue", "Front End"],
     "date": "2024-1-2",
     "isNew": false
+  },
+  {
+    "title": "Belajar Node Js",
+    "tags": ["Javascript", "Dom"],
+    "data": "2024-5-1",
+    "isNew": true
+  },
+  {
+    "title": "Belajar tailwind",
+    "tags": ["Css", "Daisy Ui"],
+    "date": "2024-3-4",
+    "isNew": true
+  },
+  {
+    "title": "Laravel",
+    "tags": ["oop", "Php"],
+    "date": "2023-6-5",
+    "isNew": true
   }
 ]
